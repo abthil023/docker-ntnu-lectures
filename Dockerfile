@@ -6,6 +6,8 @@ RUN mkdir /work
 COPY start_lab.sh start_notebook.sh run-jupyter.py run-npm.py /work/
 RUN chmod a+x /work/*;
 
+RUN mkdir /data
+
 ENV PATH="${PATH}:/work"
 
 RUN  \
