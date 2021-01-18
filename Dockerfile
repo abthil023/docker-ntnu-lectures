@@ -3,7 +3,7 @@ FROM continuumio/anaconda3
 LABEL version="1.5" maintainer="Marcella Schutz <abthil023@protonmail.com>"
 
 RUN mkdir /work
-COPY start_lab.sh start_notebook.sh run-jupyter.py run-npm.py /work/
+COPY start_lab.sh start_notebook.sh run-jupyter.py run-npm.py do_push.sh /work/
 RUN chmod a+x /work/*;
 
 RUN mkdir /data

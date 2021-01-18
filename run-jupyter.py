@@ -78,7 +78,7 @@ def main( argv = None ):
     parser = argparse.ArgumentParser( description="Start a docker image with the current directory mounted as /data")
     parser.add_argument("--data_dir", "-d", default=".")
     parser.add_argument("--container", default="abthil023/ntnu-lectures")
-    parser.add_argument("--client_dir", "-c", default="/data")
+    parser.add_argument("--client_dir", "-c", default="/import")
     parser.add_argument("--port", "-p", default=8888)
     parser.add_argument("--client_port", default=8888)
     parser.add_argument("commands", nargs="*", default=[ "lab" ])
