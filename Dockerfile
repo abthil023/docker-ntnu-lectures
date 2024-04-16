@@ -29,7 +29,7 @@ RUN \
 
 RUN \
     python -m pip install pygments \
-    youtube-dl \
+    yt-dlp[default] \
     jinja2 \
 #    google-colab \
     papermill \
@@ -46,9 +46,13 @@ RUN \
     docutils \
     pyopenssl
 
-RUN npm install -g \
-    canopy \
-    scenejs
+RUN \
+    wget https://github.com/cli/cli/releases/download/v2.47.0/gh_2.47.0_linux_amd64.deb
+    dpkg --install gh_2.47.0_linux_amd64.deb
+
+#RUN npm install -g \
+#    canopy \
+#    scenejs
 
 RUN dos2unix /work/*.sh
 
